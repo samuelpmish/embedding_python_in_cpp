@@ -49,7 +49,7 @@ Simulation * sim;
 
 ////////////////////////////////////////////////////
 
-// the free functions exist only forward to the Simulation object
+// the free functions exist only to forward information to the Simulation object
 void initialize() { sim = new Simulation; }
 
 std::vector< double > compute_response(std::vector< double > inputs) {
