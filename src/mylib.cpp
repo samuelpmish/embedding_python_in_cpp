@@ -22,6 +22,9 @@ struct Simulation {
     std::cout << std::endl;
 
     // pass the data through to the python interpreter, invoke "process_data" and cast the output back to a vector
+    //
+    // note: this is only one of many ways of executing python code with pybind11, for other ways to
+    // run arbitrary code snippets or existing script files, see https://pybind11.readthedocs.io/en/stable/advanced/embedding.html
     std::vector< double > outputs = mypythonlib.attr("process_data")(&inputs).cast<std::vector<double>>();
 
     std::cout << "(c++) f'(x): ";
