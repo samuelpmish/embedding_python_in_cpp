@@ -26,7 +26,7 @@ cmake --build build
 ```
 
 run the driver executable from the base directory (so that the python interpreter 
-will find `import mypythonlib`
+will be able to resolve `import mypythonlib`)
 
 ```
 % build/driver
