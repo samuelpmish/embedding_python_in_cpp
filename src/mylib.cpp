@@ -21,6 +21,7 @@ struct Simulation {
     }
     std::cout << std::endl;
 
+    // pass the data through to the python interpreter, invoke "process_data" and cast the output back to a vector
     std::vector< double > outputs = mypythonlib.attr("process_data")(&inputs).cast<std::vector<double>>();
 
     std::cout << "(c++) f'(x): ";
